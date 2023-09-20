@@ -3,6 +3,8 @@
 Used when an obj has to behave diff depending upon what State it's in. 
 > Eg ; a mobile button when pushed opens up lockscreen if the mobile is locked; locks the screen when the mobile is open; when battery is low then open battery level screen
 
+**Essentially the principle of Polymorphism is being used here!**
+
 ![img.png](img.png)
 
 
