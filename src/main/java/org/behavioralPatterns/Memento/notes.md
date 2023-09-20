@@ -2,6 +2,8 @@
 
 ![img.png](img.png)
 
+used primarily for UNDOING changes in places like text editor etc
+
 Editor Class has a depnedncy of EditorSTate class and takes it as an arg to createState and restore State
 
 EditorState only has one func; store state and return Content 
