@@ -10,13 +10,19 @@ import org.creationalPatterns.Builder.CastleBuilder;
 import org.creationalPatterns.Builder.Director;
 import org.creationalPatterns.Factory.OS;
 import org.creationalPatterns.Factory.OSFactory;
+import org.creationalPatterns.Prototype.Animal;
+import org.creationalPatterns.Prototype.AnimalFactory;
+import org.creationalPatterns.Prototype.Sheep;
 
 public class Main {
     public static void main(String[] args) {
-        Builder CastleBuilder = new CastleBuilder();
-        Director director = new Director(CastleBuilder);
+        AnimalFactory animalFactory = new AnimalFactory();
+        Sheep sheep = new Sheep();
+        sheep.setName("harry");
+        Animal clonedSheep = animalFactory.getClone(sheep);
+        clonedSheep.setName("delicious!");
+        System.out.println(clonedSheep.getName());
+        ;
 
-        director.makeBuilding();
-        System.out.println(director.getBuilding());;
     }
 }
