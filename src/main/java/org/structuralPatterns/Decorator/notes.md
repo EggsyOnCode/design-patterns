@@ -19,3 +19,6 @@ we make another **Decorator Class** for adding functionality to the base compone
 ![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
+
+
+> Rememeber that Decorator Class also implements the same interface that base component implements ;in our case the Pizza interface

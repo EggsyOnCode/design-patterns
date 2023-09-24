@@ -16,12 +16,15 @@ import org.creationalPatterns.Prototype.Sheep;
 import org.structuralPatterns.Adapter.FancyAdapterClass;
 import org.structuralPatterns.Adapter.FancyUI;
 import org.structuralPatterns.Adapter.RestaurantUI;
+import org.structuralPatterns.Decorator.Mozarella;
+import org.structuralPatterns.Decorator.Pizza;
+import org.structuralPatterns.Decorator.PlainPizza;
+import org.structuralPatterns.Decorator.TomatoSauce;
 
 public class Main {
     public static void main(String[] args) {
-        FancyAdapterClass adapterClass = new FancyAdapterClass(new FancyUI());
-        RestaurantUI restaurantUI = new RestaurantUI(adapterClass);
-        restaurantUI.displayMenu();
-
+        Pizza pizza = new TomatoSauce(new Mozarella(new PlainPizza()));
+        // how is this chaining working!?
+        System.out.println(pizza.getDesc());
     }
 }
