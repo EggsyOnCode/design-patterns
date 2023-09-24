@@ -13,16 +13,15 @@ import org.creationalPatterns.Factory.OSFactory;
 import org.creationalPatterns.Prototype.Animal;
 import org.creationalPatterns.Prototype.AnimalFactory;
 import org.creationalPatterns.Prototype.Sheep;
+import org.structuralPatterns.Adapter.FancyAdapterClass;
+import org.structuralPatterns.Adapter.FancyUI;
+import org.structuralPatterns.Adapter.RestaurantUI;
 
 public class Main {
     public static void main(String[] args) {
-        AnimalFactory animalFactory = new AnimalFactory();
-        Sheep sheep = new Sheep();
-        sheep.setName("harry");
-        Animal clonedSheep = animalFactory.getClone(sheep);
-        clonedSheep.setName("delicious!");
-        System.out.println(clonedSheep.getName());
-        ;
+        FancyAdapterClass adapterClass = new FancyAdapterClass(new FancyUI());
+        RestaurantUI restaurantUI = new RestaurantUI(adapterClass);
+        restaurantUI.displayMenu();
 
     }
 }
