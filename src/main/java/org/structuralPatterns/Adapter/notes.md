@@ -14,3 +14,7 @@ This transaltor will be used to implemetn the client's UI
 - open /closed
 
 ![img.png](img.png)
+
+
+![img_1.png](img_1.png)
+
