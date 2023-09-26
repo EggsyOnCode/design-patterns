@@ -1,13 +1,15 @@
 package org;
-import org.structuralPatterns.Decorator.Mozarella;
-import org.structuralPatterns.Decorator.Pizza;
-import org.structuralPatterns.Decorator.PlainPizza;
-import org.structuralPatterns.Decorator.TomatoSauce;
+import org.structuralPatterns.Composite.CompositeBox;
+import org.structuralPatterns.Composite.ConcreteBox;
+import org.structuralPatterns.Composite.Product;
+import org.structuralPatterns.Composite.Toy;
 
 public class Main {
     public static void main(String[] args) {
-        Pizza pizza = new TomatoSauce(new Mozarella(new PlainPizza()));
-        // how is this chaining working!?
-        System.out.println(pizza.getDesc());
+        Product toy = new Toy(56);
+        ConcreteBox concreteBox = new ConcreteBox(45.6);
+        CompositeBox compositeBox = new CompositeBox(toy, concreteBox);
+        System.out.println(compositeBox.getPrice());
+
     }
 }
