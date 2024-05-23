@@ -2,6 +2,7 @@ package org.structuralPatterns.Decorator;
 
 public class PlainPizza implements Pizza{
 
+
     @Override
     public String getDesc() {
         return ("Ingredient: Dough ");
@@ -11,4 +12,5 @@ public class PlainPizza implements Pizza{
     public double getCost() {
         return 5.5;
     }
+
 }

@@ -10,4 +10,10 @@ public class OSFactory {
             return new Windows();
         }
     }
+
+    public static void main(String[] args) {
+        OSFactory fac = new OSFactory();
+        OS os = fac.getOS("Android");
+        os.specs();
+    }
 }

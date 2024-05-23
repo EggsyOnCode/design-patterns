@@ -17,4 +17,11 @@ public class PizzaDecorator implements Pizza{
     public double getCost() {
         return tempPizza.getCost();
     }
+
+    public static void main(String[] args) {
+        Pizza piz = new PlainPizza();
+        PizzaDecorator mozDec = new Mozarella(piz);
+        System.out.println(mozDec.getDesc());
+        System.out.println(piz.getDesc());
+    }
 }

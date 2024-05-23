@@ -15,4 +15,14 @@ public class Director {
         this.builder.buildArchStyle();
         this.builder.buildBuildingSize();
     }
+
+    public static void main(String[] args) {
+        ApartmentBuilder aptBuilder = new ApartmentBuilder();
+        Director director = new Director(aptBuilder);
+        director.makeBuilding();
+        Building build = director.getBuilding();
+        System.out.println(build.getStyle());
+    }
 }
+
+
